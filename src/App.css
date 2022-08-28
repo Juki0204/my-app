@@ -1,0 +1,54 @@
+.container{
+  padding: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 10px;
+}
+
+@media screen and (max-width: 899px){
+  .container{
+    max-width: 600px;
+    min-width: 520px;
+  }
+}
+
+.form_outer{
+  border: 2px solid #999;
+  background: #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.form_ttl, .form_description{
+  width: 30%;
+  text-align: center;
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #999;
+}
+
+.flex input[type="text"]{
+  width: calc(70% - 10px);
+}
+
+.button{
+  width: 40%;
+  height: 30px;
+}
+
+.align-right{
+  text-align: right;
+}

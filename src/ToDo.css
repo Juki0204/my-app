@@ -1,0 +1,138 @@
+.todo_outer{
+    border: 2px solid #fbd;
+    padding: 5px 10px 175px;
+    width: calc((100% - 20px) / 3);
+    background: #fce;
+    min-height: 400px;
+    height: auto;
+    position: relative;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 899px){
+    .todo_outer{
+        width: calc((100% - 10px) / 2);
+    }
+}
+
+.todo_outer:nth-child(3n-2){
+    border: 2px solid #fd9;
+    background: #ffc;
+}
+
+.todo_outer:nth-child(3n-1){
+    border: 2px solid #9ff;
+    background: #cff;
+}
+
+.todo_ttl, .todo_description{
+    padding: 3px;
+}
+
+.todo_ttl{
+    padding-left: 20px;
+    border-bottom: 1px solid #999;
+    position: relative;
+}
+
+.todo_ttl::before{
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: #999;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    margin: auto;
+}
+
+.annotation{
+    width: calc(100% - 20px);
+    height: 100px;
+    padding: 3px;
+    margin: 10px auto 0;
+    position: absolute;
+    bottom: 65px;
+    left: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+.annotation::placeholder{
+    color: #aaa;
+}
+
+.complete_btn_outer{
+    height: 50px;
+    width: calc(100% - 20px);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+
+.complete_btn {
+    position: absolute;
+    opacity: 0;
+}
+  
+.complete_btn_label {
+    display: block;
+    position: relative;
+    padding: 0 0 0 80px;
+    line-height: 38px;
+    font-size: 24px;
+    border: 2px solid #fff;
+    height: 46px;
+    border-radius: 14px;
+    background-color: #999;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    transition: .2s;
+    color: #999;
+}
+
+.complete_btn_label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    margin: auto;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    transition: background-color .2s;
+}
+
+.complete_btn_label::after {
+    content: "Incomplete";
+    font-size: 24px;
+    position: absolute;
+    left: 80px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    color: #fff;
+}
+
+
+.complete_btn:checked + .complete_btn_label {
+    background-color: #da6884;
+}
+
+.complete_btn:checked + .complete_btn_label {
+    color: #fff;
+}
+
+.complete_btn:checked + .complete_btn_label::before {
+    background-color: #fff;
+}
+
+.complete_btn:checked + .complete_btn_label::after {
+    visibility: hidden;
+}
